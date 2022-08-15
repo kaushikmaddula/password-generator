@@ -1,0 +1,315 @@
+/* Importing Font Anton from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+/*================== VARIABLES CSS ==================*/
+:root{
+    /* Colors */
+    --background-color:#072B2E;
+    --bright-green: #4ADF86;
+    --turquoise: #0FBAC6;
+    --white-grey: #E6E6E6;
+    --background-result1: rgba(7,43,46,0.8);
+    --background-result: rgba(31, 41, 55, 0.8);
+    --cyan:#e9fff9;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1F2937;
+    font-family: "Crete Round", serif;
+    color: var(--cyan);
+    position: relative;
+}
+
+
+
+/* =========== Glass Container ========== */
+.centerGlassContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.glassContainer{
+    position: relative;
+    /* max-width: 1000px;
+    max-height: 600px; */
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+    z-index: 1;
+}
+
+
+/* ========== Title =========== */
+.greenType {
+    color: var(--bright-green);
+}
+.blueType {
+    color: var(--turquoise);
+}
+.blueType:hover{
+    color: var(--bright-green);
+    transition: ease-in 0.25s;
+    font-size: 24px;
+}
+.title{
+  margin: 0 50px 120px 0;  
+}
+
+.title p {
+    color: var(--white-grey);
+    margin-top: 15px;
+    font-size: 23px;
+}
+.title h1{
+    font-size: 50px;
+}
+
+
+
+/* =========== User Interface ======== */
+.userInterface{
+    margin: 100px 0 0 95px;
+    font-size: 20px;
+    width: 300px;
+    height: 500px;
+    position: relative;
+}
+
+
+
+/*======= Password Length  Input range=====*/
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 50%;
+    background: transparent;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: var(--bright-green);
+    cursor: pointer;
+    margin-top: -7px;
+    box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  }
+  input[type="range"]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #10b981;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  }
+  input[type="range"]::-moz-range-track {
+    width: 90%;
+    height: 1.9px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px var(--background-color);
+    background-color: var(--bright-green);
+    border-radius: 1.3px;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 90%;
+    height: 1.9px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px var(--background-color);
+    background-color: var(--bright-green);
+    border-radius: 1.3px;
+  }
+  input[type="range"]:focus {
+    outline: none;
+  }
+  input[type="range"]::-ms-track {
+    width: 90%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+.centerLengthSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+/* ======== Characters Section ======= */
+.centerCharactersSection{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.checkboxDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkboxDiv label{
+    margin-left: 5px;
+}
+
+
+/* ==== Button ==== */
+
+.btn{
+    color: var(--white-grey);
+    background: coral;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    transition: .5s ease-in-out;
+    margin-top: 30px; 
+    margin-bottom: 50px;
+    margin-left: 25%;
+} 
+.btn:hover{
+    transition: .5s ease-in-out;
+    color: black;
+    background: grey;
+}
+
+
+
+/* ===== password Result ===== */
+.passwordBox{
+    background: var(--background-result);
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.fa-copy{
+    position: absolute;
+    right: 12.5px;
+    animation: copyIcon .65s;
+}
+
+
+
+/* ========== Blobs ========== */
+.blobContainer{
+    width: 1000px;
+    height: 600px;
+    position: relative;
+}
+
+.blueBlobs{
+    position: absolute;
+    top: -200px;
+    left: -365px;
+}
+
+
+.orangeBlobs{
+    position: absolute;
+    right: -400px;
+    bottom: -200px;
+    width: 800px;
+}
+
+
+@keyframes copyIcon{
+    from{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+/* responsive design */
+/* @media only screen and (max-width: 600px) {
+    .userInterface{
+        margin: 100px 0 0 0;
+        font-size: 20px;
+        width: 300px;
+        height: 500px;
+        position: relative;
+    }
+    .title{
+        margin: 0 0 120px 0;  
+    }
+    .title p {
+        color: var(--white-grey);
+        margin-top: 15px;
+        font-size: 23px;
+    }
+    .title h1{
+        font-size: 50px;
+    }
+    .passwordBox{
+        background: var(--background-result);
+        width: 300px;
+        height: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .fa-copy{
+        position: absolute;
+        right: 12.5px;
+        animation: copyIcon .65s;
+    }
+    .blobContainer{
+        width: 1000px;
+        height: 600px;
+        position: relative;
+    }
+    .blueBlobs{
+        position: absolute;
+        top: -200px;
+        left: -365px;
+    }
+    .orangeBlobs{
+        position: absolute;
+        right: -400px;
+        bottom: -200px;
+        width: 800px;
+    }
+} */
